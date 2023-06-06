@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+div#container {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+div#container div.card {
+  transform-style: preserve-3d;
+}
+
+div#container div.card img.back {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+#card1 {
+  transform: rotateZ(-20deg);
+  transition: transform 1s;
+}
+#card1:hover {
+  transform: translateZ(200px) rotateZ(-20deg) rotateY(180deg);
+}
+#card2 {
+  transform: rotateZ(20deg);
+  transition: transform 1s;
+}
+#card2:hover {
+  transform: translateZ(200px) rotateZ(20deg) rotateY(-180deg);
+}

@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+input#csc:invalid {
+  transform: skew(10deg);
+  border: 1px solid red;
+}
+
+input#csc:focus:invalid {
+  transform: none;
+  border: none;
+}
