@@ -1,0 +1,92 @@
+/* 
+Keyword colors can be found at http://colours.neilorangepeel.com/
+*/
+
+/* border-box fix */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+/* Add padding to all of the .container child elements */
+.container > *,
+.flex > * {
+  padding: 20px;
+}
+.container {
+  color: white;
+  font-family: helvetica, arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex {
+  padding: 0;
+}
+header {
+  background: skyblue;
+  flex: 1 0 100%;
+  order: 1;
+}
+main {
+  background: slategray;
+  flex: 1 1 500px;
+  order: 3;
+}
+nav {
+  background: cadetblue;
+  flex: 1 0 200px;
+  order: 2;
+}
+aside {
+  background: seagreen;
+    flex: 1 0 200px;
+  order: 4;
+}
+footer {
+  background: darkslateblue;
+  flex: 1 0 100%;
+  order: 5;
+}
+/* not needed */
+/* .flex {
+  display: flex;
+} */
+/* @media (min-width: 900px) {
+  main {
+    order: 10;
+  }
+  aside {
+    order: 12;
+  }
+  nav,
+  aside {
+    flex: 1 1 0;
+  }
+  main {
+    flex: 3 1 0;
+  }
+}*/
+/* @media (max-width: 700px) {
+  main {
+    flex: 0 0 75%;
+  }
+  nav {
+    flex: 0 0 25%;
+  }
+  aside {
+    flex: 0 0 100%;
+  }
+} */

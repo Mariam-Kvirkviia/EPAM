@@ -25,31 +25,20 @@ body {
 .fcloud01 {
   top: 100px;
   z-index: 100;
-  animation-name: slide1;
-  animation-duration: 25s;
-  animation-timing-function: linear;
+
   overflow-x: hidden;
+  animation: slide1 25s linear infinite;
 }
 
 .fcloud02 {
   top: 240px;
   z-index: 200;
-  animation-name: slide2;
-  animation-duration: 45s;
-  animation-timing-function: linear;
+  animation: slide1 45s linear infinite 10s backwards;
   overflow-x: hidden;
 }
 @keyframes slide1 {
   0% {
     transform: translateX(-290px);
-  }
-  100% {
-    transform: translateX(100vw);
-  }
-}
-@keyframes slide2 {
-  0% {
-    transform: translateX(-470px);
   }
   100% {
     transform: translateX(100vw);

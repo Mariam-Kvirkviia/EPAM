@@ -1,43 +1,41 @@
-body {padding:6em; background:#fcfcfc;}
+body {
+  padding: 6em;
+  background: #fcfcfc;
+}
 
-.wrap {width:200px; margin:auto;  z-index:1;}
+.wrap {
+  width: 200px;
+  margin: auto;
+  z-index: 1;
+}
 
 .msg {
   color: whitesmoke;
-  text-align:center;
-  font-family: 'Bree Serif', Courier, monospaced;
-  font-size:3.5em;
-  width:200px;
-  position:absolute;
-  margin:55px 0 0 2px;
-  pointer-events: none; 
+  text-align: center;
+  font-family: "Bree Serif", Courier, monospaced;
+  font-size: 3.5em;
+  width: 200px;
+  position: absolute;
+  margin: 55px 0 0 2px;
+  pointer-events: none;
 }
 
 .sticker {
-  width:200px;
-  height:200px;
-  position:absolute;
-  background: url(sticker.png) top center no-repeat; 
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background: url(sticker.png) top center no-repeat;
+  animation: rotate 10s infinite linear;
+  animation-play-state: paused;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.sticker:hover {
+  animation-play-state:running;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}

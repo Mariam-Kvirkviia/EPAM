@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section * {
+        box-sizing: border-box;
+      }
+      .flex-container {
+        border: 4px solid black;
+        margin: 40px 30px;
+        font-weight: bold;
+        max-width: 400px;
+        min-height: 100px;
+        display: flex;
+        /* flex-wrap: wrap; */
+        gap: 30px;
+      }
+
+      .flex-container.two,
+      .flex-container.three {
+        width: 200px;
+      }
+
+      #test > div {
+        width: 250px;
+        flex-shrink: 0;
+      }
+
+      /* boxes */
+      section > div {
+        padding: 20px 0;
+        font-family: sans-serif;
+        text-align: center;
+        /*   height: 100px;
+  width: 100px; */
+        /* flex-basis: 100px;
+        flex-shrink: 1;
+        flex-grow: 1; */
+        flex: 0 1 100px;
+      }
+      .one {
+        flex: 3 1 30px;
+      }
+      .two {
+        flex: 1 1 30px;
+      }
+      /* flex items */
+      div:nth-of-type(1) {
+        background: red;
+        /*   flex-grow: 1; */
+        /*   width 60px; */
+      }
+      div:nth-of-type(2) {
+        background: orange;
+        /*   flex-grow: 2; */
+        /*   width: 120px; */
+      }
+      div:nth-of-type(3) {
+        background: yellow;
+        /*   flex-grow: 3;
+  width: 180px; */
+      }
+      div:nth-of-type(4) {
+        background: yellowgreen;
+      }
+      div:nth-of-type(5) {
+        background: lightblue;
+      }
+      div:nth-of-type(6) {
+        background: mediumpurple;
+      }
+      /* Correct:These blocks will divide extra space excluding their 
+      -basis of 150px. So, it will be 600 – 150px * 2 = 300px of extra space,
+       and .flex-block-one will get 1/3 = 100px; flex-block-two will get 2/3 = 200px. 
+       And both of them add these values for 150px of flex-basis. */
+      .flex-block-one {
+        flex: 1 1 150px;
+      }
+      .flex-block-two {
+        flex: 2 1 150px;
+      }
+      article {
+        display: flex;
+        width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section>
+    <section class="flex-container">
+      <div class="one">1</div>
+      <div class="two">2</div>
+    </section>
+    <article>
+      <div class="flex-block-one">dfd</div>
+      <div class="flex-block-two">dfsdf3</div>
+    </article>
+    <!-- <section class="flex-container two">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5 - longer content - won't shrink smaller than this</div>
+      <div>6</div>
+    </section>
+    <section id="test" class="flex-container three">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </section> -->
+  </body>
+</html>

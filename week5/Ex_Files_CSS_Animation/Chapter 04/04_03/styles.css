@@ -1,4 +1,18 @@
 .wrap {
-  width:40%;
-  margin:4em auto;  
+  width: 40%;
+  margin: 4em auto;
+}
+.fill {
+  animation: filling 1s ease-in forwards;
+  fill: red;
+}
+@keyframes filling {
+  0% {
+    transform: scaleX(0.1);
+  }
+
+  100% {
+    transform: scaleX(1);
+    fill: green;
+  }
 }

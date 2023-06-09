@@ -1,13 +1,12 @@
-
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300|Lato:300,400);
 
 body {
   background: rgb(249, 228, 202);
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   line-height: 1.4;
   font-weight: 300;
   margin: 6em 0;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 section {
@@ -17,30 +16,51 @@ section {
 
 .card {
   background: rgba(255, 255, 255, 0.9);
-  font-family: 'Roboto Condensed', sans-serif;
-  padding: .5em 2em;
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 0.5em 2em;
   border-radius: 4px;
-  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.03), 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.03),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.05);
   margin: auto;
   width: 430px;
   text-align: center;
+  animation: slide 1s, fade 2s;
 }
 
+@keyframes slide {
+  0% {
+    transform: translateY(80vh);
+  }
+  60% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .inner {
   margin: 1em 0 2em 0;
 }
 
 h2 {
-  color: #FB5362;
-  font-family: 'Roboto Condensed', sans-serif;
+  color: #fb5362;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 40px;
   font-size: 2rem;
   font-weight: 300;
-  margin: 0 0 .15em 0;
+  margin: 0 0 0.15em 0;
 }
 
 h3 {
-  margin: 0 0 .5em 0;
+  margin: 0 0 0.5em 0;
 }
 
 p {
@@ -50,7 +70,6 @@ p {
 
 .icon-space {
   margin-top: -40px;
-
 }
 .icon-space img {
   border-radius: 50%;
@@ -60,7 +79,8 @@ p {
   background: white;
   width: 100px;
   height: 100px;
-  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.03), 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.03),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 button {
@@ -71,29 +91,15 @@ button {
   padding: 0 5%;
   border: none;
   border-radius: 4px;
-  background-color: #1A9DB4;
+  background-color: #1a9db4;
   color: whitesmoke;
   font-size: 1em;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
-  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.03), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
-  transition: background-color .3s ease-out;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.03),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease-out;
 }
 button:hover {
-  background-color: #FB5362;
+  background-color: #fb5362;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
