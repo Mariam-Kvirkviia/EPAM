@@ -13,11 +13,8 @@ body {
 .robot {
   animation-name: slide;
   animation-duration: 4s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-direction: alternate;
-  animation-timing-function: cubic-bezier(0, 1.72, 0.55, 0.37);
+
+  animation-timing-function: cubic-bezier(0, 1.89, 0.4, 0.21);
 }
 
 @keyframes slide {

@@ -1,15 +1,14 @@
 @charset "utf-8";
 
 div#slidecontainer figure {
-  transform: perspective(1000px) translateZ(0px) rotateX(0deg) rotateY(0deg)
-    scale3d(1, 1, 1);
-  transform-origin: 140% -5%;
-  transition: none;
+  transform-origin: 120% -7%;
+  transform: perspective(1600px) translateX(0) rotateY(0) scale(1) translateY(0)
+    rotateX(0);
 }
 
 div#slidecontainer:hover figure {
-  transform: perspective(1000px) translateZ(50px) rotateY(180deg) rotateX(70deg)
-    scale3d(0.5, 0.5, 1);
+  transform: perspective(1600px) translateZ(50px) rotateY(180deg) rotateX(70deg)
+    scale(0.6);
 }
 
 #slidecontainer #slide4 {

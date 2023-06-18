@@ -15,56 +15,69 @@ span {
   display: inline-block;
   margin-left: -20px;
   color: #77c6bc;
-  transform-origin: 70% 70%;
-}
-@keyframes t {
-  from {
-    transform: rotateX(-90deg);
-  }
-  to {
-    transform: rotateX(0deg);
-  }
-}
-@keyframes tb {
-  from {
-    transform: rotateX(0deg);
-  }
-  to {
-    transform: rotateX(-180deg);
-  }
+  transform: rotateX(90deg);
+  transform-origin: 50% 70%;
+  transition: 2s all;
 }
 
 span:nth-child(2n) {
   color: #95b8cb;
 }
-
 span:nth-child(1) {
-  animation: t 1s both 1s, tb 1s forwards 2.6s;
+  animation: 1s up 0.8s forwards, 1s down 2s forwards, 2s drift 3.2s forwards;
 }
 
 span:nth-child(2) {
-  margin-right: 30px;
-  animation: t 1s both 1.2s, tb 1s forwards 2.8s;
+  animation: 1s up 1s forwards, 1s down 2.2s forwards, 2s drift 3.4s forwards;
 }
 
 span:nth-child(3) {
-  margin-right: 30px;
-  animation: t 1s both 1.4s, tb 1s forwards 3s;
+  margin: 0 20px;
+  animation: 1s up 1.2s forwards, 1s down 2.4s forwards, 2s drift 3.6s forwards;
 }
 
 span:nth-child(4) {
-  animation: t 1s both 1.6s, tb 1s forwards 3.2s;
+  animation: 1s up 1.4s forwards, 1s down 2.6s forwards, 2s drift 3.8s forwards;
 }
 
 span:nth-child(5) {
-  margin-left: -28px;
-  animation: t 1s both 1.8s, tb 1s forwards 3.4s;
+  animation: 1s up 1.6s forwards, 1s down 2.8s forwards, 2s drift 4s forwards;
 }
 
 span:nth-child(6) {
-  animation: t 1s both 2s, tb 1s forwards 3.6s;
+  animation: 1s up 1.8s forwards, 1s down 3s forwards, 2s drift 4.2s forwards;
 }
 
 span:nth-child(7) {
-  animation: t 1s both 2.2s, tb 1s forwards 3.8s;
+  animation: 1s up 2s forwards, 1s down 3.2s forwards, 2s drift 4.4s forwards;
+}
+@keyframes up {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+@keyframes down {
+  100% {
+    transform: rotateX(-180deg);
+  }
+}
+@keyframes drift {
+  0% {
+    transform: rotateX(-180deg);
+  }
+  30% {
+    transform: rotateX(-180deg) rotateY(40deg);
+  }
+  50% {
+    transform: rotateX(-180deg) rotateY(-40deg);
+  }
+  70% {
+    transform: rotateX(-180deg) rotateY(40deg);
+  }
+  100% {
+    transform: rotateX(-180deg);
+  }
 }

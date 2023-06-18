@@ -4,7 +4,7 @@
   display: block;
   background: transparent url(walker_frames.png) 0 0 no-repeat;
   margin: 3em auto;
-  animation: walker 2s steps(10) infinite;
+  animation: walker 2s steps(10) infinite;  /*10 img woth 500 height*/
 }
 
 @keyframes walker {

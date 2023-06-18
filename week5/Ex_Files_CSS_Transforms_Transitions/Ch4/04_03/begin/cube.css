@@ -4,13 +4,10 @@ div#container {
   perspective: 1500px;
 }
 div#cube {
-  transition: all 1s;
   position: relative;
   transform-style: preserve-3d;
-  transform: rotateY(-25deg) rotateX(-25deg) rotateZ(10deg);
-}
-div#cube:hover {
-  transform: rotateX(40deg) rotateY(-215deg) rotateZ(-10deg);
+  transform: rotateX(-30deg) rotateY(-30deg) rotateZ(0);
+  transition: 2s all;
 }
 
 div#cube img {
@@ -18,7 +15,9 @@ div#cube img {
   top: 0;
   left: 0;
 }
-
+div#cube:hover {
+  transform: rotateX(40deg) rotateY(-215deg) rotateZ(-10deg);
+}
 img#front {
   transform: rotateY(0deg) translateZ(100px);
 }
