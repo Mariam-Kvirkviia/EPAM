@@ -1,0 +1,51 @@
+$margin: 20px 40px 30px 110px; // list
+$colors: blue, green, pink;
+$mapping: (
+  1: first,
+  2: second,
+  3: third,
+);
+// list
+$list: join($margin, $colors); // just for a try
+$index: map-get($mapping, 1);
+.list {
+  margin: nth($margin, 1); //20
+  margin: $margin; //20 40 30 10
+  margin: $index;
+}
+
+//for
+@for $i from 1 through length($colors) {
+  .li#{$i} a {
+    color: nth($colors, $i);
+  }
+}
+// .li1 a {
+//   color: blue;
+// }
+
+// .li2 a {
+//   color: green;
+// }
+
+// .li3 a {
+//   color: pink;
+// }
+//each
+@each $i, $value in $colors {
+  .li#{$value} {
+    color: $i;
+  }
+}
+
+// .blue a {
+//   color: blue;
+// }
+
+// .green a {
+//   color: green;
+// }
+
+// .pink a {
+//   color: pink;
+// }

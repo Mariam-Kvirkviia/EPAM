@@ -1,0 +1,17 @@
+$r: 152;
+$g: 134;
+$b: 242;
+$c: rgb(132, 146, 71);
+div {
+  @if ($r ==152) {
+    background-color: rgba($r, $g, $b, 0.3);
+  } @else {
+    background-color: pink;
+  }
+}
+ul {
+  background-color: lighten(blue, 34);
+}
+
+
+// 
