@@ -1,22 +1,18 @@
-warrior = "Ninja"; // warrior is defined here
-// warrior3 = "Viking";
+// “var” variables can be declared below their use
+// function sayHi() {
+//   phrase = "Hello";
 
-const screamWarrior = () => {
-  let warrior2 = "Samurai";
-  // wrapped in a function now is a closure
-  return {
-    shootWarrior: () => {
-      return console.log(warrior, warrior2);
-    },
-  };
-};
+//   console.log(phrase); //Hello
 
-const newWarrior = screamWarrior();
+//   var phrase;
+// }
+// sayHi();
 
-newWarrior.shootWarrior();
+//Declarations are hoisted, but assignments are not→
+function sayHi() {
+  console.log(phrase); //undefined
 
-console.log(warrior, warrior3);
+  var phrase = "Hello";
+}
 
-var warrior; // warrior is declared here...
-
-var warrior3; // will show undefined
+sayHi();

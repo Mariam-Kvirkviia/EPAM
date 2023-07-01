@@ -11,6 +11,7 @@ console.log(counter());
 console.log(counter());
 console.log(counter());
 
+console.log("----------------------");
 //2
 function multiply(num1) {
   return function (num2) {

@@ -1,3 +1,4 @@
+//all functions in JS form a closure
 var warrior = 'Ninja';
 
 const screamWarrior = () => {
