@@ -32,13 +32,9 @@ getUsers().then((users) => {
 });
 //3
 function summarize1(...promises) {
-  return Promise.all(promises).then((nums) => {
-    let sum = 0;
-    for (const num of nums) {
-      sum += num;
-    }
-    return sum;
-  });
+  return Promise.all(promises).then((data) =>
+    data.reduce((acc, el) => acc + el, 0)
+  );
 }
 const promise1 = Promise.resolve(4);
 const promise2 = new Promise((resolve) => resolve(2));

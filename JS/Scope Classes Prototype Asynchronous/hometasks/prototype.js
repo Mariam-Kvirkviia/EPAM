@@ -24,11 +24,16 @@ logger.clearLog();
 console.log(logger.getLog()); // []
 
 Array.prototype.shuffle = function () {
-  let old = JSON.parse(JSON.stringify(this));
-  let result = this.sort((a, b) => 0.5 - Math.random());
-  console.log(result, old);
-  return result;
-};
+  let newArray = [];
+  let index = [];
+  while (newArray.length !== this.length) {
+    let r = Math.floor(Math.random() * this.length);
 
-console.log([1, 2, 3, 4].shuffle()); // result: some random shuffling ex: [2,3,4,1]
-console.log(["a", "b", "c"].shuffle()); // result: some random shuffling ex: ['c', 'b', 'a']
+    if (!index.includes(r)) {
+      newArray.push(this[r]);
+      index.push(r);
+    }
+  }
+
+  return newArray;
+};
