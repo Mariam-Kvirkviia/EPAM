@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Events</title>
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <ul id="ul">
+      <li><img src="images/ppl.gif" alt="purple" /></li>
+      <li><img src="images/blu.gif" alt="blue" /></li>
+      <li><img src="images/pnk.gif" alt="pink" /></li>
+      <li><img src="images/org.gif" alt="orange" /></li>
+      <li><img src="images/ylw.gif" alt="yellow" id="yellow" /></li>
+      <li><img src="images/grn.gif" alt="green" id="green" /></li>
+      <li><img src="images/ygr.gif" alt="ygreen" /></li>
+      <li><img src="images/gry.gif" alt="gray" /></li>
+      <li><img src="images/red.gif" alt="red" id="red" /></li>
+    </ul>
+    <script>
+      document
+        .getElementById("ul")
+        .addEventListener("click", (e) => console.log("ul is clicked"));
+      let y = document.getElementById("yellow");
+      y.addEventListener("click", (e) => {
+        e.stopPropagation();
+        console.log("yellow li is clicked 1");
+      });
+      y.addEventListener("click", (e) => {
+        console.log("yellow li is clicked 2");
+      });
+    </script>
+  </body>
+</html>
