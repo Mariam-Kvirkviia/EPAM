@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test npx mocha \"src/**/*.test.js\" --recursive --require @babel/register --file src/mocha-setup.js"
+    "test": "npx mocha \"src/**/*.test.js\" --recursive --require @babel/register --file src/mocha-setup.js",
+    "coverage": "nyc --reporter=lcov --reporter=text npm run test"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "chai": "^4.2.0",
     "chai-exclude": "^2.0.2",
     "mocha": "^6.2.0",
+    "nyc": "^15.1.0",
     "regenerator-runtime": "^0.13.3",
     "sinon": "^15.2.0",
     "supertest": "^4.0.2"

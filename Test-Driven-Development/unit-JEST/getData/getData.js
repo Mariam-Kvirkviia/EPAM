@@ -2,7 +2,7 @@ const axios = require("axios");
 
 const getData = async () => {
   try {
-    return await axios.get("httpaceholder.typicode.com/todos/1");
+    return await axios.get("https://jsonplaceholder.typicode.com/todos/1");
   } catch {
     throw Error;
   }
