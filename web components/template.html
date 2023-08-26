@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>template</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>template</title>
+  </head>
+  <body>
+    <button>change text</button>
+    <template id="tmpl">
+      <p>hello template<span slot="sl"></span></p>
+      <script>
+        let p = document.querySelector("p");
+        p.style.color = "blue";
+      </script>
+    </template>
+    <script>
+      let tmpl = document.getElementById("tmpl"); //retrieve a reference to the template
+      let newNode = document.importNode(tmpl.content, true); // creating  template's content copy
+      document.body.appendChild(newNode); // importing template's content into DOM
+
+      document.querySelector("button").addEventListener("click", () => {
+        console.log(newNode);
+
+        newNode.innetHTML = '<slot name="sl">text was changed</slot>';
+        document.body.appendChild(newNode);
+      });
+    </script>
+  </body>
 </html>
